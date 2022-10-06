@@ -46,7 +46,6 @@ function AddContact(){
                         </div>
                     </div>
                 </div>
-
             </section>
         </React.Fragment>
     )
