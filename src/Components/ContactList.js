@@ -6,14 +6,14 @@ function ContactList() {
   const [contacts, setContacts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:9000/contacts")
+    fetch("https://sammy-contact-manager.herokuapp.com/contacts")
       .then((res) => res.json())
       .then((data) => setContacts(data));
   }, []);
 
 
  function handleDelete(id) {
-    fetch(`http://localhost:9000/contacts/${id}`, {
+    fetch(`https://sammy-contact-manager.herokuapp.com/contacts/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

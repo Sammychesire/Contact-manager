@@ -6,10 +6,10 @@ function ViewContact() {
   const [contact, setContact] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:9000/contacts/${contactId}`)
+    fetch(`https://sammy-contact-manager.herokuapp.com/contacts/${contactId}`)
       .then((res) => res.json())
       .then((item) => setContact(item));
-  }, []);
+  }, [contactId]);
 
   return (
     <React.Fragment>

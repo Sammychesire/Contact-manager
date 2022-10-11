@@ -7,14 +7,14 @@ function EditContact() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:9000/contacts/${contactId}`)
+    fetch(`https://sammy-contact-manager.herokuapp.com/contacts/${contactId}`)
       .then((res) => res.json())
       .then((item) => setContact(item));
-  }, []);
+  }, [contactId]);
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch(`http://localhost:9000/contacts/${contactId}`, {
+    fetch(`https://sammy-contact-manager.herokuapp.com/contacts/${contactId}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

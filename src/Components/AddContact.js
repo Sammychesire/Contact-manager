@@ -16,7 +16,7 @@ function AddContact() {
 
 function handleSubmit(e) {
     e.preventDefault();
-    fetch(`http://localhost:9000/contacts`, {
+    fetch(`https://sammy-contact-manager.herokuapp.com/contacts`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
